@@ -4,7 +4,7 @@
   "authors": [
     "Justin Huang <jstn@cs.washington.edu>"
   ],
-  "description": "An element for ROS services using roslibjs.",
+  "description": "An element for calling ROS services using roslibjs.",
   "keywords": [
     "web-component",
     "polymer",

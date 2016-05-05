@@ -17,6 +17,7 @@
       </div>
       <p>
         Run <code>rosrun rospy_tutorials add_two_ints_server</code> as well as the websocket server to try the demo below.
+        Try calling the service without the server to see an error get logged in the console.
       </p>
       <div>
         <input type="text" id="aInput" value="1"></input> + 
@@ -28,6 +29,7 @@
       <ros-service
         id="service"
         last-response="{{result}}"
+        on-fail="handleError"
         name="/add_two_ints"
         ros="{{ros}}"
         service-type="rospy_tutorials/AddTwoInts"
@@ -53,6 +55,9 @@
         });
 
         var seedElement = t.$.service;
+        t.handleError = function(evt) {
+          console.error(evt.detail);
+        }
         t.$.callButton.addEventListener('click', function() {
           var request = {
             a: parseInt(t.$.aInput.value),
