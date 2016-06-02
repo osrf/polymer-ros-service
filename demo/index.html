@@ -6,7 +6,7 @@
     <title>ros-service Demo</title>
     <script src="../../webcomponentsjs/webcomponents-lite.min.js"></script>
     <link rel="import" href="../ros-service.html">
-    <link rel="import" href="../../ros-ros/ros-ros.html">
+    <link rel="import" href="../../ros-websocket/ros-websocket.html">
   </head>
   <body unresolved>
     <template id="t" is="dom-bind">
@@ -25,7 +25,7 @@
         <input id="callButton" type="button" value="Call service"></input><br />
         Answer: {{result.sum}}
       </div>
-      <ros-ros id="ros" ros="{{ros}}"></ros-ros>
+      <ros-websocket auto id="ros" ros="{{ros}}"></ros-websocket>
       <ros-service
         id="service"
         last-response="{{result}}"
@@ -51,7 +51,6 @@
         });
         t.$.connectButton.addEventListener('click', function() {
           rosElement.url = document.querySelector('#urlInput').value;
-          rosElement.connect();
         });
 
         var seedElement = t.$.service;

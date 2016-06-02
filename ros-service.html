@@ -5,7 +5,7 @@ An element for calling ROS services using roslibjs.
 
 Example:
 
-    <ros-ros ros="{{ros}}"></ros-ros>
+    <ros-websocket ros="{{ros}}"></ros-websocket>
     <ros-service
       auto
       id="service"
@@ -31,7 +31,7 @@ You can get the result (or error message) in two ways: declaratively or through 
 ### Declarative 
 You can bind `last-response` and `last-error` to variables representing the response for the most recent request:
 
-    <ros-ros ros="{{ros}}"></ros-ros>
+    <ros-websocket ros="{{ros}}"></ros-websocket>
     <ros-service
       auto
       id="service"

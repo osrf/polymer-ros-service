@@ -1,6 +1,6 @@
 {
   "name": "ros-service",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": [
     "Justin Huang <jstn@cs.washington.edu>"
   ],
@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#^1.2.0",
-    "ros-ros": "jstnhuang/ros-ros"
+    "ros-websocket": "jstnhuang/ros-websocket"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
