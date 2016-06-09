@@ -181,7 +181,7 @@ The `error` event includes the error message as a string:
         } else {
           var error = 'ros-service was not initialized before calling.';
           console.warn(error);
-          that.fire('fail', error);
+          this.fire('fail', error);
         }
       }
 
