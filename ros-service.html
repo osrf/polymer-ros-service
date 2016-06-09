@@ -179,7 +179,9 @@ The `error` event includes the error message as a string:
             that.fire('fail', error);
           });
         } else {
-          console.warn('ros-service is not ready to be called.');
+          var error = 'ros-service was not initialized before calling.';
+          console.warn(error);
+          that.fire('fail', error);
         }
       }
 
